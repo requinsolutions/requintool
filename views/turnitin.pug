@@ -1,0 +1,23 @@
+extends layout
+          
+block content
+  .content-page
+    .content
+        .container-fluid    
+          .row
+            .col-12
+              .page-title-box
+                h4.page-title Cards
+          .row
+            .col-12
+              button.btn.btn-icon.btn-primary.waves-effect.waves-light(type='submit', onclick='myFunction()')
+                i.mdi.mdi-reload  
+              br
+              br
+          .row
+            .col-12
+              iframe(src='https://www.turnitin.com/login_page.asp?lang=en_us', width='1000', height='700', id='tunitin')
+          script.
+            function myFunction() {
+            window.top.location.reload();
+            }

@@ -1,0 +1,81 @@
+extends layout
+          
+block content
+  .content-page
+    .content
+        .container-fluid    
+          .row
+            .col-12
+              .page-title-box
+                h4.page-title Cards
+          .row
+            .col-xl-4
+              .card-box
+                h4.header-title Daily Sales
+                p.text-muted March 26 - April 01
+                .mb-3.mt-4
+                  .float-right.d-none.d-xl-block
+                    img(src='assets/images/cards/visa.png', alt='user-card', height='28')
+                    img(src='assets/images/cards/master.png', alt='user-card', height='28')
+                    img(src='assets/images/cards/american-express.png', alt='user-card', height='28')
+                  h2.font-weight-light $8,459.56
+                .chartjs-chart.dash-sales-chart
+                  .chartjs-size-monitor(style='position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;')
+                    .chartjs-size-monitor-expand(style='position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;')
+                      div(style='position:absolute;width:1000000px;height:1000000px;left:0;top:0')
+                    .chartjs-size-monitor-shrink(style='position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;')
+                      div(style='position:absolute;width:200%;height:200%;left:0; top:0')
+                  canvas#sales-chart.chartjs-render-monitor(width='615', style='display: block; width: 615px; height: 165px;', height='165')
+              // end card-box
+              .card-box.widget-chart-one.gradient-success.bx-shadow-lg
+                .float-left(dir='ltr')
+                  div(style='display:inline;width:80px;height:80px;')
+                    canvas(width='80', height='80')
+                    input(data-plugin='knob', data-width='80', data-height='80', data-linecap='round', data-fgcolor='#ffffff', data-bgcolor='rgba(255,255,255,0.2)', value='49', data-skin='tron', data-angleoffset='180', data-readonly='true', data-thickness='.1', readonly='readonly', style='width: 44px; height: 26px; position: absolute; vertical-align: middle; margin-top: 26px; margin-left: -62px; border: 0px none; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; font: bold 16px Arial; text-align: center; color: rgb(255, 255, 255); padding: 0px; -moz-appearance: none;')
+                .widget-chart-one-content.text-right
+                  p.text-white.mb-0.mt-2 Statistics
+                  h3.text-white $714
+              // end card-box
+              // end col
+            .col-xl-8
+              .card-box
+                h4.header-title.mb-3 Statistics
+                .row.text-center
+                  .col-sm-4.mb-3
+                    h3.font-weight-light 4,335
+                    p.text-muted.text-overflow Total Sales
+                  .col-sm-4.mb-3
+                    h3.font-weight-light 874
+                    p.text-muted.text-overflow Open Compaign
+                  .col-sm-4.mb-3
+                    h3.font-weight-light 2,548
+                    p.text-muted.text-overflow Total Sales
+                .chartjs-chart.high-performing-product
+                  .chartjs-size-monitor(style='position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;')
+                    .chartjs-size-monitor-expand(style='position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;')
+                      div(style='position:absolute;width:1000000px;height:1000000px;left:0;top:0')
+                    .chartjs-size-monitor-shrink(style='position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;')
+                      div(style='position:absolute;width:200%;height:200%;left:0; top:0')
+                  canvas#high-performing-product.chartjs-render-monitor(width='615', style='display: block; width: 615px; height: 309px;', height='309')
+              // end card-box
+              // end col
+          .row
+            .col-xl-12
+              .card-box
+                h4.header-title.mb-3 Total Revenue
+                .row.text-center
+                  .col-6.mb-3
+                    h3.font-weight-light 8,459
+                    p.text-muted.text-overflow Total Sales
+                  .col-6.mb-3
+                    h3.font-weight-light 584
+                    p.text-muted.text-overflow Open Compaign
+                .chartjs-chart.conversion-chart
+                  .chartjs-size-monitor(style='position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;')
+                    .chartjs-size-monitor-expand(style='position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;')
+                      div(style='position:absolute;width:1000000px;height:1000000px;left:0;top:0')
+                    .chartjs-size-monitor-shrink(style='position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;')
+                      div(style='position:absolute;width:200%;height:200%;left:0; top:0')
+                  canvas#conversion-chart.chartjs-render-monitor(width='615', style='display: block; width: 950px; height: 309px;', height='309')
+              // end card-box
+              // end col

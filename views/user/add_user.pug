@@ -1,0 +1,48 @@
+extends ../layout
+    
+block content
+  style.
+      #imgloader {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+      }
+  img#imgloader(src='qwerty.gif', alt='Paris', style='display:none;')
+  .content-page
+    .content
+        .container-fluid    
+          .row
+              .col-12
+                .page-title-box
+                  h4.page-title Services
+          .row
+            .col-12
+              .card-box
+                h4.header-title Featured services
+                form.form-horizontal#fservice(method='POST', action='/api/clients/', enctype='application/x-www-form-urlencoded')
+                  .form-group.row
+                    label.col-sm-2.col-form-label(for='simpleinput') Name
+                    .col-sm-10
+                      input#simpleinput.form-control(type='text', placeholder='Enter Client Name...', name='name')
+                  .form-group.row
+                    label.col-sm-2.col-form-label(for='simpleinput') Email
+                    .col-sm-10
+                      input#simpleinput.form-control(type='email', placeholder='Enter Client Email...', name='email')
+                  .form-group.row
+                    label.col-sm-2.col-form-label(for='simpleinput') Phone
+                    .col-sm-10
+                      input#simpleinput.form-control(type='text', placeholder='Enter Client Phone...', name='phone')
+                  .form-group.row
+                    label.col-sm-2.col-form-label(for='simpleinput') College
+                    .col-sm-10
+                      input#simpleinput.form-control(type='text', placeholder='Enter Client College....', name='college')
+                  .form-group.row
+                    .col-sm-10
+                      button.btn.btn-outline-success.waves-effect.waves-light.width-md#formsubmit(type='submit') Submit
+                      #loader.spinner-border.text-success.m-2(role='status', style='display:none')
+                      span.sr-only Loading...
+    //- script(src='https://code.jquery.com/jquery-3.4.1.min.js')
+    //- script(src='../js/add_fservices.js')
+                      

@@ -1,0 +1,70 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Greeva - Responsive Bootstrap 4 Admin Dashboard
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(content='A fully featured admin theme which can be used to build CRM, CMS, etc.', name='description')
+    meta(content='Coderthemes', name='author')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    // App favicon
+    link(rel='shortcut icon', href='assets/images/favicon.ico')
+    // App css
+    link(href='assets/css/bootstrap.min.css', rel='stylesheet', type='text/css')
+    link(href='assets/css/icons.min.css', rel='stylesheet', type='text/css')
+    link(href='assets/css/app.min.css', rel='stylesheet', type='text/css')
+  body.authentication-bg.authentication-bg-pattern.d-flex.align-items-center
+    .home-btn.d-none.d-sm-block
+      a(href='https://requigroup.com')
+        i.fas.fa-home.h2.text-white
+    .account-pages.w-100.mt-5.mb-5
+      .container
+        .row.justify-content-center
+          .col-md-8.col-lg-6.col-xl-5
+            .card
+              .card-body.p-4
+                .text-center.mb-4
+                  a(href='https://requigroup.com')
+                    span
+                      img(src='/../images/logo.png', alt='', height='68')
+                  br
+                  label#errorlog(style="display:none; color:red;") Invalid credentials
+                form#loginform.pt-2(role='form')
+                  .form-group.mb-3
+                    label(for='emailaddress') Email address
+                    input#emailaddress.form-control(type='email', required='', placeholder='Enter your email', name='email')
+                  .form-group.mb-3
+                    label(for='password') Password
+                    .input-group
+                      input.form-control#showpass(type='password', required='', placeholder='Enter your password', name='password')
+                      .input-group-append
+                        button.btn.btn-dark.waves-effect.waves-light(type='button' onclick='myFunction()' style='background-color:#19373d; border-color:#19373d; color:#ffffff; font-weight:bold;') 
+                          i.mdi.mdi-eye
+                  .form-group.mb-0.text-center
+                    button#login.btn.btn-success.btn-block(type='submit', style='background-color:#19373d; border-color:#19373d; color:#ffffff; font-weight:bold;')  Log In 
+                    #loader.spinner-border.text-success.m-2(role='status', style='display:none;')
+                      span.sr-only Loading...
+                  // end col
+                  // end row
+                  // end card-body
+                  // end card
+                  // end col
+                  // end row
+                  // end container
+                  // end page
+                  // Vendor js
+                  script(src='assets/js/vendor.min.js')
+                  script(src='https://cdn.jsdelivr.net/npm/sweetalert2@8')
+                  // App js
+                  script(src='assets/js/app.min.js')
+                  script(src='https://code.jquery.com/jquery-3.4.1.min.js')
+                  script(src='js/login.js')
+                  script(type='text/javascript').
+                    function myFunction() {
+                    var x = document.getElementById('showpass');
+                    if (x.type === 'password') {
+                      x.type = 'text';
+                    } else {
+                      x.type = 'password';
+                    }
+                    } 
